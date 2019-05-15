@@ -3,6 +3,10 @@
 	"displayName": "Terminal Command Shortcuts",
 	"description": "Run predefined terminal commands from explorer's context menu.",
 	"publisher": "adrianwilczynski",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AdrianWilczynski/TerminalCommandShortcuts.git"
+	},
 	"icon": "img/icon.png",
 	"version": "0.0.1",
 	"engines": {
@@ -34,7 +38,7 @@
 			{
 				"title": "Terminal Command Shortcuts",
 				"properties": {
-					"terminalCommands.commands": {
+					"terminalCommandShortcuts.commands": {
 						"type": "array",
 						"items": {
 							"type": [
