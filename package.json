@@ -1,6 +1,6 @@
 {
 	"name": "terminal-commands",
-	"displayName": "Terminal Command Shortcuts",
+	"displayName": "Terminal Commands Shortcuts",
 	"description": "Run predefined terminal commands from Explorer context menu or Command Palette.",
 	"publisher": "adrianwilczynski",
 	"repository": {

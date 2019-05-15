@@ -1,4 +1,4 @@
-# Terminal Command Shortcuts
+# Terminal Commands Shortcuts
 
 Run predefined terminal commands from Explorer context menu or Command Palette.
 
