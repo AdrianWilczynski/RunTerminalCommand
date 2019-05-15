@@ -1,4 +1,4 @@
-# Terminal Commands Shortcuts
+# Run Terminal Command
 
 Run predefined terminal commands from Explorer context menu or Command Palette.
 
@@ -8,7 +8,7 @@ Run predefined terminal commands from Explorer context menu or Command Palette.
 
 ## Configuration
 ```json
-    "terminalCommandShortcuts.commands": [
+    "runTerminalCommand.commands": [
         {
             "command": "ng g c ",
             "name": "Generate Component"

@@ -1,11 +1,11 @@
 {
 	"name": "terminal-commands",
-	"displayName": "Terminal Commands Shortcuts",
+	"displayName": "Run Terminal Command",
 	"description": "Run predefined terminal commands from Explorer context menu or Command Palette.",
 	"publisher": "adrianwilczynski",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/AdrianWilczynski/TerminalCommandShortcuts.git"
+		"url": "https://github.com/AdrianWilczynski/RunTerminalCommand.git"
 	},
 	"icon": "img/icon.png",
 	"version": "1.0.2",
@@ -36,9 +36,9 @@
 		},
 		"configuration": [
 			{
-				"title": "Terminal Command Shortcuts",
+				"title": "Run Terminal Command",
 				"properties": {
-					"terminalCommandShortcuts.commands": {
+					"runTerminalCommand.commands": {
 						"type": "array",
 						"items": {
 							"type": [
