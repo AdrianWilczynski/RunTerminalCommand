@@ -29,10 +29,12 @@ Run predefined terminal commands from explorer's context menu or Command Palette
     ]
 ```
 
-| Property | Description                                                                                                    |
+| Property | Description                                                                                                   |
 |----------|---------------------------------------------------------------------------------------------------------------|
 | command  | The text to send to the terminal.                                                                             |
 | auto     | Whether to add a new line to the text being sent, this is normally required to run a command in the terminal. |
+| auto     | Whether to add a new line to the text being sent, this is normally required to run a command in the terminal. |
+| preserve | Don't dispose of terminal running this command.                                                               |
 | name     | Name for the command. A human readable string which is rendered prominent.                                    |
 | group    | Commands sharing the group name will be grouped together in the menu.                                         |
 

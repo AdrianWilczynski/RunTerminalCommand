@@ -1,12 +1,12 @@
 import * as vscode from 'vscode';
 import { TerminalCommand } from './command';
 
-let terminal: vscode.Terminal | undefined;
+let previousTerminal: vscode.Terminal | undefined;
 
 export function runCommand(command: TerminalCommand, cwd?: string, resource?: string) {
     ensureDisposed();
 
-    terminal = vscode.window.createTerminal({ cwd: cwd });
+    const terminal = vscode.window.createTerminal({ cwd: cwd });
     terminal.show();
 
     let addNewLine = command.auto;
@@ -20,11 +20,15 @@ export function runCommand(command: TerminalCommand, cwd?: string, resource?: st
     }
 
     terminal.sendText(commandText, addNewLine);
+
+    if (!command.preserve) {
+        previousTerminal = terminal;
+    }
 }
 
 function ensureDisposed() {
-    if (terminal) {
-        terminal.dispose();
-        terminal = undefined;
+    if (previousTerminal) {
+        previousTerminal.dispose();
+        previousTerminal = undefined;
     }
 }
