@@ -1,0 +1,100 @@
+{
+	"name": "terminal-commands",
+	"displayName": "Terminal Command Shortcuts",
+	"description": "Run predefined terminal commands from explorer's context menu.",
+	"publisher": "adrianwilczynski",
+	"icon": "img/icon.png",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.runCommand"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.runCommand",
+				"title": "Run Terminal Command..."
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.runCommand",
+					"group": "navigation"
+				}
+			]
+		},
+		"configuration": [
+			{
+				"title": "Terminal Command Shortcuts",
+				"properties": {
+					"terminalCommands.commands": {
+						"type": "array",
+						"items": {
+							"type": [
+								"object"
+							],
+							"properties": {
+								"command": {
+									"type": "string",
+									"description": "The text to send to the terminal."
+								},
+								"auto": {
+									"type": "boolean",
+									"description": "Whether to add a new line to the text being sent, this is normally required to run a command in the terminal."
+								},
+								"name": {
+									"type": "string",
+									"description": "Name for the command. A human readable string which is rendered prominent."
+								},
+								"group": {
+									"type": "string",
+									"description": "Commands sharing the group name will be grouped together in the menu."
+								}
+							}
+						},
+						"default": [
+							{
+								"command": "ng g c ",
+								"name": "Generate Component"
+							},
+							{
+								"command": "tsc {resource}",
+								"auto": true
+							},
+							{
+								"command": "dotnet run",
+								"auto": true,
+								"group": ".NET Core"
+							},
+							{
+								"command": "dotnet add page -n ",
+								"group": ".NET Core"
+							}
+						]
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}
