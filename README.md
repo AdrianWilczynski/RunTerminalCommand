@@ -1,6 +1,6 @@
 # Terminal Command Shortcuts
 
-Run predefined terminal commands from explorer's context menu.
+Run predefined terminal commands from explorer's context menu or Command Palette.
 
 ## See how it works
 
