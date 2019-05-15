@@ -90,6 +90,11 @@
 								"auto": true,
 								"preserve": true,
 								"group": ".NET Core"
+							},
+							{
+								"command": "dotnet add package {clipboard}",
+								"auto": true,
+								"group": ".NET Core"
 							}
 						]
 					}

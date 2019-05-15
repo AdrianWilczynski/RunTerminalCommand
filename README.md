@@ -31,6 +31,11 @@ Run predefined terminal commands from explorer's context menu or Command Palette
             "auto": true,
             "preserve": true,
             "group": ".NET Core"
+        },
+        {
+            "command": "dotnet add package {clipboard}",
+            "auto": true,
+            "group": ".NET Core"
         }
     ]
 ```
@@ -44,4 +49,7 @@ Run predefined terminal commands from explorer's context menu or Command Palette
 | name     | Name for the command. A human readable string which is rendered prominent.                                    |
 | group    | Commands sharing the group name will be grouped together in the menu.                                         |
 
-Use `{resource}` variable to insert current resource's name into the command.
+| Variable    | Description                                                                                                |
+|-------------|------------------------------------------------------------------------------------------------------------|
+| {resource}  | Name of current resource.                                                                                  |
+| {clipboard} | Clipboard content.                                                                                         |
