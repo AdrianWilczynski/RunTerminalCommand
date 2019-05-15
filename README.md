@@ -25,6 +25,12 @@ Run predefined terminal commands from explorer's context menu or Command Palette
         {
             "command": "dotnet add page -n ",
             "group": ".NET Core"
+        },
+        {
+            "command": "dotnet watch run",
+            "auto": true,
+            "preserve": true,
+            "group": ".NET Core"
         }
     ]
 ```
