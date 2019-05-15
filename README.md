@@ -4,7 +4,7 @@ Run predefined terminal commands from explorer's context menu.
 
 ## See how it works
 
-![Exmaple](img/example.gif)
+![Example](img/example.gif)
 
 ## Configuration
 ```json
@@ -29,7 +29,7 @@ Run predefined terminal commands from explorer's context menu.
     ]
 ```
 
-| Property | Descrition                                                                                                    |
+| Property | Description                                                                                                    |
 |----------|---------------------------------------------------------------------------------------------------------------|
 | command  | The text to send to the terminal.                                                                             |
 | auto     | Whether to add a new line to the text being sent, this is normally required to run a command in the terminal. |
