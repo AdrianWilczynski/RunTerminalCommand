@@ -4,10 +4,10 @@ import { TerminalCommand } from './command';
 let previousTerminal: vscode.Terminal | undefined;
 
 export async function runCommand(command: TerminalCommand, cwd?: string, resource?: string) {
-    ensureDisposed();
-
     const terminal = vscode.window.createTerminal({ cwd: cwd });
     terminal.show();
+
+    ensureDisposed();
 
     const result = await insertVariables(command.command, resource);
 
