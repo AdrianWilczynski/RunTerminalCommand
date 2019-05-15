@@ -40,6 +40,7 @@ Run predefined terminal commands from Explorer context menu or Command Palette.
     ]
 ```
 
+### Properties
 | Property | Description                                                                                                   |
 |----------|---------------------------------------------------------------------------------------------------------------|
 | command  | The text to send to the terminal.                                                                             |
@@ -48,6 +49,7 @@ Run predefined terminal commands from Explorer context menu or Command Palette.
 | name     | Name for the command. A human readable string which is rendered prominent.                                    |
 | group    | Commands sharing the group name will be grouped together in the menu.                                         |
 
+### Variables
 | Variable    | Description                                                                                                |
 |-------------|------------------------------------------------------------------------------------------------------------|
 | {resource}  | Name of current resource.                                                                                  |
