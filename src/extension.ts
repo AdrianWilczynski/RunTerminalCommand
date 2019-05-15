@@ -2,15 +2,15 @@ import * as vscode from 'vscode';
 import { getCommands } from './configuration';
 import { showCommandsPick } from './pick';
 import { getEnvironment } from './env';
-import { run } from './terminal';
+import { runCommand } from './terminal';
 
 export function activate(context: vscode.ExtensionContext) {
-	context.subscriptions.push(vscode.commands.registerCommand('extension.runCommand', runCommand));
+	context.subscriptions.push(vscode.commands.registerCommand('extension.runTerminalCommand', runTerminalCommand));
 }
 
 export function deactivate() { }
 
-async function runCommand(uri: vscode.Uri | undefined) {
+async function runTerminalCommand(uri: vscode.Uri | undefined) {
 	const commands = getCommands();
 
 	const pickedCommand = await showCommandsPick(commands);
@@ -20,7 +20,7 @@ async function runCommand(uri: vscode.Uri | undefined) {
 
 	const env = getEnvironment(uri || getOpenFileUri());
 
-	run(pickedCommand, env.cwd, env.resource);
+	runCommand(pickedCommand, env.cwd, env.resource);
 }
 
 function getOpenFileUri() {

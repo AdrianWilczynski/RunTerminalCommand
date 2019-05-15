@@ -16,20 +16,20 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.runCommand"
+		"onCommand:extension.runTerminalCommand"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.runCommand",
+				"command": "extension.runTerminalCommand",
 				"title": "Run Terminal Command..."
 			}
 		],
 		"menus": {
 			"explorer/context": [
 				{
-					"command": "extension.runCommand",
+					"command": "extension.runTerminalCommand",
 					"group": "navigation"
 				}
 			]

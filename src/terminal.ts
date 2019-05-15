@@ -3,7 +3,7 @@ import { TerminalCommand } from './command';
 
 let terminal: vscode.Terminal | undefined;
 
-export function run(command: TerminalCommand, cwd?: string, resource?: string) {
+export function runCommand(command: TerminalCommand, cwd?: string, resource?: string) {
     ensureDisposed();
 
     terminal = vscode.window.createTerminal({ cwd: cwd });
