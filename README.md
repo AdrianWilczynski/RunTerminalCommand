@@ -35,3 +35,5 @@ Run predefined terminal commands from explorer's context menu.
 | auto     | Whether to add a new line to the text being sent, this is normally required to run a command in the terminal. |
 | name     | Name for the command. A human readable string which is rendered prominent.                                    |
 | group    | Commands sharing the group name will be grouped together in the menu.                                         |
+
+Use `{resource}` variable to insert current resource's name into the command.
