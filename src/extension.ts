@@ -18,7 +18,13 @@ async function runCommand(uri: vscode.Uri | undefined) {
 		return;
 	}
 
-	const env = getEnvironment(uri);
+	const env = getEnvironment(uri || getOpenFileUri());
 
 	run(pickedCommand, env.cwd, env.resource);
+}
+
+function getOpenFileUri() {
+	if (vscode.window.activeTextEditor) {
+		return vscode.window.activeTextEditor.document.uri;
+	}
 }

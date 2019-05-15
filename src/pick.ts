@@ -23,8 +23,8 @@ export async function showCommandsPick(commands: TerminalCommand[]) {
 
     if (picked.type === 'group' && picked.group) {
         picked = await vscode.window.showQuickPick(
-            getPickItems(
-                getFromGroup(commands, picked.group)));
+            getPickItems(getFromGroup(commands, picked.group)),
+            { matchOnDescription: true });
     }
 
     if (!picked || picked.type !== 'command' || !picked.command) {

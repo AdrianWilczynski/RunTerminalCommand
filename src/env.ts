@@ -4,6 +4,7 @@ import * as fs from 'fs';
 
 export function getEnvironment(uri: vscode.Uri | undefined) {
     let cwd, resource;
+
     if (uri && uri.scheme === 'file') {
         const status = fs.lstatSync(uri.fsPath);
 
