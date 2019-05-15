@@ -15,6 +15,17 @@
 	"categories": [
 		"Other"
 	],
+	"keywords": [
+		"Terminal",
+		"CMD",
+		"PowerShell",
+		"Command",
+		"Commands",
+		"Shortcuts",
+		"CLI",
+		"Command Line",
+		"Run"
+	],
 	"activationEvents": [
 		"onCommand:extension.runTerminalCommand"
 	],
