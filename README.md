@@ -23,7 +23,7 @@ Run predefined terminal commands from Explorer context menu or Command Palette.
             "group": ".NET Core"
         },
         {
-            "command": "dotnet add page -n ",
+            "command": "dotnet new page -n ",
             "group": ".NET Core"
         },
         {
