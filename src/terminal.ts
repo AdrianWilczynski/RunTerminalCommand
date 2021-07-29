@@ -6,7 +6,7 @@ let previousTerminal: vscode.Terminal | undefined;
 export async function runCommand(command: TerminalCommand, cwd?: string, resource?: string) {
     // if useActive option true, use current terminal instead of creating new
     let terminal: vscode.Terminal | undefined;
-    if (command.useActive) {
+    if (command.useActive && !!vscode.window.activeTerminal) {
         terminal = vscode.window.activeTerminal;
     } else {
         terminal = vscode.window.createTerminal({ cwd: cwd });
