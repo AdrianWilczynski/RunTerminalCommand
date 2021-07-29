@@ -4,14 +4,20 @@ import { TerminalCommand } from './command';
 let previousTerminal: vscode.Terminal | undefined;
 
 export async function runCommand(command: TerminalCommand, cwd?: string, resource?: string) {
-    const terminal = vscode.window.createTerminal({ cwd: cwd });
-    terminal.show();
+    // if useActive option true, use current terminal instead of creating new
+    let terminal: vscode.Terminal | undefined;
+    if (command.useActive) {
+        terminal = vscode.window.activeTerminal;
+    } else {
+        terminal = vscode.window.createTerminal({ cwd: cwd });
+    };
+    terminal!.show();
 
     ensureDisposed();
 
     const result = await insertVariables(command.command, resource);
 
-    terminal.sendText(result.command, command.auto && result.successful);
+    terminal!.sendText(result.command, command.auto && result.successful);
 
     if (!command.preserve) {
         previousTerminal = terminal;

@@ -23,7 +23,8 @@ function sanitizeConfiguration(configuration: any) {
             return {
                 command: maybeCommand.command,
                 auto: !!maybeCommand.auto,
-                preserve: !!maybeCommand.preserve,
+                useActive: !!maybeCommand.useActive,
+                preserve: (!!maybeCommand.preserve || !!maybeCommand.useActive),
                 name: notEmptyStringOrUndefined(maybeCommand.name),
                 group: notEmptyStringOrUndefined(maybeCommand.group)
             };
